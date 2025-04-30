@@ -89,6 +89,10 @@
 ;pop rbx       ; Restore preserved register
 ;ret
 
+;***************6. For ARM - System V AMD64 ABI***************************
+; REGISTER RDI, RSI, RDX, RCX, R8, R9, 10
+; FP - XMMM0 TO XMMM7
+
 segment .data 
 
 segment .bss 
