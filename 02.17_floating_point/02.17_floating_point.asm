@@ -15,9 +15,15 @@
 ; FADD src - STO += SRC
 ; FADDP dest; FSUB src; FSUBP dest; FMUL src; FMULP dest; FDIV src; 
 
+;In debug gef mode - "i float" gets dump info of floating stack
+;examine 'b' --> $ x/f &a
+; 'x' means examine and 'f' means in float
+;examine 'b' --> $ x/4f &a
+
+; ST0 - floating point register points to the top of the floating point stack
 ;***************LOad and Store Back***************************
 segment .data 
-a dq 1.99
+a dq 1.99 ; dq reserves 64-bit
 b dq 0.0
 segment .bss 
 
