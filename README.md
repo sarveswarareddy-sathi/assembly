@@ -42,3 +42,27 @@ GDB :
 $ gdb
 
 $ pi import urllib.request as u, tempfile as t; g=t.NamedTemporaryFile(suffix='-gef.py'); open(g.name, 'wb+').write(u.urlopen('https://tinyurl.com/gef-main').read()); gdb.execute('source %s' % g.name)
+
+
+ARM Compile :
+
+$ vi program.s
+
+$ as program.s -o program.o
+
+$ gcc -o first.out first.o
+
+$ ./first.out
+
+$ echo $?
+
+$ make
+
+
+ARM TEMPLATE:
+
+$ wget http://cs.unk.edu/~miller/ArmTemplate.tar.gz
+
+$ tar zxf ArmTemplate.tar.gz
+
+$ ./template/fix.sh
