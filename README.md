@@ -5,8 +5,9 @@ GitHub - https://github.com/drmilhous/templateMake​
 
 Pre-req libraries - sudo apt install nasm gcc-multilib vim​
 
-CREATE PROJECT :
-$ genMake.sh Hello​
+CREATE x86 PROJECT :
+
+$ ./templateMake/genMake.sh Hello​
 
 $ Make​
 
@@ -66,3 +67,22 @@ $ wget http://cs.unk.edu/~miller/ArmTemplate.tar.gz
 $ tar zxf ArmTemplate.tar.gz
 
 $ ./template/fix.sh
+
+
+CREATE ARM PROJECT :
+
+$ ./template/armGen.sh program
+
+ARM TOOLCHAIN :
+
+$ sudo apt update
+
+$ sudo apt install gcc-arm-none-eabi
+
+sudo apt install qemu-system-arm
+sudo apt install qemu-user
+qemu-arm ./03.02_ARM_string
+
+sudo apt update
+sudo apt install gcc-arm-none-eabi qemu-system-arm make
+

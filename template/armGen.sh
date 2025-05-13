@@ -1,5 +1,5 @@
-DIR=$HOME/project/$1
-TEMPLATE=$HOME/template/
+DIR=/workspaces/assembly/$1
+TEMPLATE=/workspaces/assembly/template/
 if [ ! -d "$DIR" ]; then
 	mkdir $DIR
 	cp $TEMPLATE/first.asm $DIR/$1.asm
