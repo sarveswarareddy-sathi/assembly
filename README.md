@@ -86,3 +86,20 @@ qemu-arm ./03.02_ARM_string
 sudo apt update
 sudo apt install gcc-arm-none-eabi qemu-system-arm make
 
+sudo apt update
+sudo apt install gcc-arm-none-eabi
+
+
+arm-none-eabi-as -o 03.03_ARM_math_data_movement.o 03.03_ARM_math_data_movement.asm
+
+
+arm-none-eabi-ld -o 03.03_ARM_math_data_movement.elf 03.03_ARM_math_data_movement.o
+
+sudo apt install qemu-user
+
+qemu-arm ./03.03_ARM_math_data_movement.elf
+
+
+sudo apt install qemu-system-arm
+
+
