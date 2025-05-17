@@ -3,6 +3,7 @@
 ; Load & Store - Can only load a byte and then do some shifting of it - for 32-bit case need multiple loads.
 ; Limits the values that can be loaded
 ; ARMv6T2 and later, MOV can load any 16-bit number, giving a range of 0x0-0xFFFF
+
 ; Use a offset from the PC to store memory address and constants.
 
 ; main:

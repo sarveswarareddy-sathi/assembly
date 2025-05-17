@@ -6,6 +6,15 @@
 ; arithmetic shift left keep sign - ASR Rd, Rm, #sh
 ; rotate right - ROR Rd, Rm, Rs
 
+; Example -----------
+; Logical Shift Left - shift bits to the left, filling with zeros on the right
+; LSL R1, R2, #2 ; R1 = R2 << 2 (mul r2 by 4)
+; Logical Shift Right - shift bits to the right, filling with zeros on the left
+; LSR R1, R2, #2 ; R1 = R2 >> 2 (div r2 by 4)
+
+; Arithmetic shift right - shift bits to the right, repserving bits on left as sign bit
+; ROR R1, R2, #4 ; Rotates  bits to the right, wrapping around the bits that fall off
+
 ; Barrel Shifter
 ; Allows shifting of bits in another operation
 ; ARM - shifts and rotations
