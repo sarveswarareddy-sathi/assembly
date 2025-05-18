@@ -1,0 +1,46 @@
+Constructs :
+1. Some are visible to user and some are not visible & hidden by the language
+2. Examples - structs, unions, switch & jump
+
+unions - is a value that may have any of several representation or formats witin the same position in memory
+allow programmer to use the same memory location but change of interpretation
+
+Example :
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+typedef union myUnion{
+    float f;
+    unsigned char t[6];
+} myUnion;
+ int main (int argc, char **argv, char **envp) {
+    union myUnion x;
+    for (int i = 0; i < 6; i++) {
+        x.t[i] = 0xFF;
+    }
+    x.f = 3.14;
+    for (int i = 0; i < 6; i++) {
+        printf("0x%X\n", x.t[i]);
+    }
+ }
+
+ Structure - composite data type declaration that defines a physically grouped list of variables under one name in a block of memory, 
+ allowing the different variables to be accessed via a single pointer or by the struct declared name which returns 
+ the same address.
+
+ typedef struct myStruct{
+    float f;
+    char c;
+    int d;
+    unsigned char t[6];
+ }myStruct;
+
+ int main(int argc, char **argv, char **envp) {
+    struct myStruct s;
+    s.f = 3.1;
+    s.c = 'a';
+    s.d = 255;
+    s.t[0] = 'b';
+    s.t[1] = 0;
+ }
