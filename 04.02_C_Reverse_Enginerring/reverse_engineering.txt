@@ -1,0 +1,29 @@
+Reverse Engineering Process ---
+1. Disassembler - machine program into assembly language
+2. Process of taking binary program and generating an assembly view of the program that could be executed
+
+Disassembler Process ---
+1. read the binary - use magic numbers to guess format, understand OS method of loading the binary & determine offsets, arch and OS to understand memory locations
+2. determine layout and reference - entry point, dynamic lib & system calls - determine entry point, dynamic lib and how sys calls
+3. Disassemble Instructions - Start at entry point - start at entry point, lookup instr length, Disassemble instr and continue untill all instr in the queue processed
+
+Types of Disassemblers :
+1. linear sweep - start at 1st instr and do next when finished
+2. Recursive Descent - start at the first instruction, follow the possible paths like jump
+
+Example code :
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char **argv, char **envp) {
+    puts("Hello World")
+    return 0;
+}
+
+Disassemble : objdump
+1. Basically adds headers
+2. esp management
+
+Online disassembler : godbolt

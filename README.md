@@ -73,33 +73,16 @@ CREATE ARM PROJECT :
 
 $ ./template/armGen.sh program
 
-ARM TOOLCHAIN :
+# Linux Disassembly
 
-$ sudo apt update
+$ vi main.c
 
-$ sudo apt install gcc-arm-none-eabi
+$ gcc main.c -m32
 
-sudo apt install qemu-system-arm
-sudo apt install qemu-user
-qemu-arm ./03.02_ARM_string
+$ objdump -D --disassembler-options=intel a.out
 
-sudo apt update
-sudo apt install gcc-arm-none-eabi qemu-system-arm make
+$ objdump -D --disassembler-options=intel a.out | grep "main>:" -A 30
 
-sudo apt update
-sudo apt install gcc-arm-none-eabi
+Online Disassembler - https://onlinediassembler.com
 
-
-arm-none-eabi-as -o 03.03_ARM_math_data_movement.o 03.03_ARM_math_data_movement.asm
-
-
-arm-none-eabi-ld -o 03.03_ARM_math_data_movement.elf 03.03_ARM_math_data_movement.o
-
-sudo apt install qemu-user
-
-qemu-arm ./03.03_ARM_math_data_movement.elf
-
-
-sudo apt install qemu-system-arm
-
-
+Compiler Explorer - https://godbolt.org/

@@ -1,0 +1,20 @@
+
+Compiler - GCC, Visual Studio & mingw
+Compiler - translates computer code written in one programming language into another machine readable executable code.
+
+Compiler Process - 
+1. Take high-level programs
+2. Generate an intermediate representation
+3. Apply optimizations
+4. Generate an output program 
+
+Output - depends on target architecture - windows x86, OS X x86, android arm & ios arm
+
+Output file format - file readable by OS
+--> Binary file format - ELF by linux, COEF/PE by windows & MACH-O by OS x86
+
+Tools - PEView on windows, objdump by linux and some disassembler - IDA Pro, Binary ninja & ghidra
+
+Hex editors - allows to view, edit and save using hexadecimal representation
+
+Reading Binary Formats - within python can do too 
