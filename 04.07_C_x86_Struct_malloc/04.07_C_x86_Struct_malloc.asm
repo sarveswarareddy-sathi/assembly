@@ -7,6 +7,9 @@
 ; heap and stack use free memory
 ; When they collide - stack overflow and out of memory
 ; For Heap - no need to pre-declare the memory
+;
+; malloc() from C to assembly - push value of size needed and call malloc() - also make sure any even byte boundary calculation
+; 
 
 segment .data 
 
