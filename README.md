@@ -86,3 +86,10 @@ $ objdump -D --disassembler-options=intel a.out | grep "main>:" -A 30
 Online Disassembler - https://onlinediassembler.com
 
 Compiler Explorer - https://godbolt.org/
+
+# Linking obj files to C
+
+$ nasm -f elf myfile.asm -o myfile.o
+
+$ gcc -m32 myfile1.o myfule2.o ... main.c
+
