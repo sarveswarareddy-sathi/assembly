@@ -1,4 +1,7 @@
 %include "asm_io.inc"
+;
+; AES intrincsic implmentation & disassemble
+; refer TINY AES cross platform example from online
 segment .data 
 
 segment .bss 
